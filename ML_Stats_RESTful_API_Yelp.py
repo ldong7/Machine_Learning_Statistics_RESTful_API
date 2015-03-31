@@ -152,6 +152,7 @@ def get_variables(variable):
         # which is a string of variable/variables
         # and it does not contain the final layer
         # it will return all possible keys of the next layer
+        # it must be in "' '" or "' ', ' '" format
         if 'attribute' in request.args:
             # construc sql query for PostgreSQL database
             sql = 'select distinct json_object_keys(col1) from (select json_' \
@@ -160,6 +161,7 @@ def get_variables(variable):
         # if there is a full attribute parameter
         # which is a string of variable/variables
         # it will return all possible values of the full key
+        # it must be in "' ', ' '" format
         elif 'attribute_key' in request.args:
             # construc sql query for PostgreSQL database
             sql = 'select distinct col1 from (select json_extract_path_text(' \
