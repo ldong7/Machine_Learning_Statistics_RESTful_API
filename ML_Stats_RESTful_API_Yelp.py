@@ -35,7 +35,7 @@ def starstats(mycity):
 
     Args:
         mycity (string): the city user given
-    
+
     Returns:
         body (json or string): a json file containing basic statistics or
                                 a string says error
@@ -133,7 +133,7 @@ def get_variables(variable):
 
     Args:
         variable (string): the variable user given
-    
+
     Returns:
         body (json or string): a json file containing a list of strings or
                                 a string says error
@@ -194,7 +194,7 @@ def get_variables(variable):
             body = json.dumps(out)
             # return error
             return body + '\n'
-        
+
         # obtain rows of the return table
         rows = cur.fetchall()
         # declare an empty list to store variables
@@ -236,7 +236,7 @@ def linear_regression(mycity):
 
     Args:
         mycity (string): the city user given
-    
+
     Returns:
         body (json or string): a json file containing basic statistics or
                                 a string says error
