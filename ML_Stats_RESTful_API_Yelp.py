@@ -43,6 +43,8 @@ def starstats(mycity):
     """
 
     # if there is a attribute parameter
+    # attribute_key must be in "'{ }'" format
+    # attribute_value must be in "' '" format
     if 'attribute_key' in request.args:
         # extract the key and value of the URL parameter
         # user-defined "attribute" feature of yelp data
